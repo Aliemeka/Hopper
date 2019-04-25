@@ -1,0 +1,28 @@
+{% extends 'profilepage/base.html' %}
+{% load staticfiles %}
+
+{% block title %}| Sign Up{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="cloak">
+        <h2>Create New Account<hr/></h2>
+	    <div class="row">
+	    	<div class="col-sm-12 col-md-2">
+	    		<div class="panel-body">
+
+	    			<form class="form-horinzontal" action="" method="post" enctype="multipart/form-data">
+	    				{% csrf_token %}
+	    				{% include 'profilepage/form-template.html' %}
+	    				<div class="col-sm-offset-2 col-sm-10" style="padding:5px">
+	    					<button type="submit" class="btn btn-success">Sign Up</button>
+	    				</div> 
+                    </form>
+
+                </div>
+                <p>Already have an account? <a href="{% url 'login' %}">login</a></p>
+            </div>
+        </div>
+	</div>
+</div>
+{% endblock %}

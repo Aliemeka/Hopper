@@ -1,0 +1,69 @@
+{% extends 'profilepage/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="container" style= "margin: 50px;">
+    <div class="cloak">
+        <div class="row">
+            <div class="container" >
+
+                <div class="spacing">
+
+                    <div class="half">
+                        <img src="{% static 'images/hopper.PNG' %}" class="middle" style="object-position: center;" /><hr/>
+                            <p class="heavy-text">
+                            Welcome to Hooper. The place that makes dreams so real 
+                            </p>
+                            <small id="help-text">DOn't be a bad designer</small>
+                    </div>
+                    <div class="half">
+                    Always have a dashboard page never link to a page that just shows Welcome
+
+                    {% if user %}
+                    <h3 style="font-family: Cambria; color: #ffffff;" class="middle">Welcome<br/> {{ user.first_name }} {{ user.last_name }}</h3>
+                    {% else %}
+
+                        {% endif %}
+                        </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+    <div class=" sticky" style="background-image:url(/static/images/CM-brainstorming-blog-graphic.png)">
+        <div class="overlay"></div>
+        <div class="containe">
+            <div class="explain-div">
+                <h3  style="text-align:center" class="heavy-text">SERVICE ONE </h3>
+                <p class="service-text-exp">
+                {% lorem 2 %}
+                </p>
+                <a class="btn btn-primary" href = "#">
+                More
+                </a>
+            
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="containe">
+            <div class="explain-div">
+                <h3  style="text-align:center" class="heavy-text">SERVICE ONE </h3>
+                <p class="service-text-exp">
+                    {% lorem 2 %}
+                </p>
+                <a class="btn btn-primary" href="#">
+                More
+                </a>
+            <div>
+        </div>
+    </div>
+
+</div>
+
+
+{% endblock %}

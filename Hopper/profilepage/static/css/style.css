@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+html,body{
+   overflow-x: hidden;
+    font-family: 'Calibri';
+    height: 100%;
+    width: 100%    
+}
+
+body{
+    background: url(backg/surn.jpg);
+    background-attachment: scroll;
+}
+
+h2{
+    font-family: 'Cambria';
+}
+
+.jumbotron{
+    background-image: url(backg/bs-bulb.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    border-radius: 0;
+}
+
+.containe{
+    width: 80%;
+    margin: 0 auto;
+}
+
+nav{    
+    font-family: 'Cambria';
+}
+
+.navbar{
+    border-radius: 0;
+    border: none;
+}
+
+.container-fluid{
+    font-family: 'Cambria';
+}
+
+.shiny{
+    background-color: inherit;
+    transition: all 0.2s linear;
+
+}
+
+.shiny:hover{
+    transform: scale(1.2)
+}
+
+.cloak{
+    background-color: ghostwhite;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 20px;
+    padding: 20px;
+}
+
+.footer-center{
+    align-content: center;
+    text-align: center;
+}
+
+.rowon{
+    margin:20px; 
+    background-color: coral;
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+
+.middle{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.spacing{
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.half{
+    width: 50%;
+}
+
+.heavy-text{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+#help-text{
+    font-style: italic;
+}
+
+.content{
+    position: absolute;
+}
+
+.sticky{
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 50px;
+    z-index: -2;
+    font-size: 1.2em;
+}
+
+.overlay{
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: #fffefe;
+    opacity: 0.4;top: 0;
+    left:0;
+}
+
+.blue {
+    background-color: #4d14eb;
+}
+.next {
+    padding: 50px;
+    position: relative;
+    font-size: 1.2em;
+    background: url(backg/cona.jpg); 
+}
+
+footer{
+    bottom: 0;
+    margin: 0;
+    position: relative;
+}

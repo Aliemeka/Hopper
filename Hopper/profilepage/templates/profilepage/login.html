@@ -1,0 +1,29 @@
+{% extends 'profilepage/base.html' %}
+{% load staticfiles %}
+
+{% block title %}| Login{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="cloak">
+		<div style="align-content: center">
+		<img src="{% static 'images/hopper.PNG' %}" class="middle"/><hr/></div>
+        <h2>Enter Login Detials<hr/></h2>
+	    <div class="row">
+	    	<div class="col-sm-12 col-md-2">
+	    		<div class="panel-body">
+
+	    			<form class="form-horinzontal" action="" method="post" enctype="multipart/form-data">
+	    				{% csrf_token %}
+	    				{% include 'profilepage/form-template.html' %}
+	    				<div class="col-sm-offset-2 col-sm-10" style="padding:5px">
+	    					<button type="submit" class="btn btn-success">Sign in</button>
+	    				</div> 
+	    			</form>
+
+	    		</div>
+            </div>
+        </div>
+	</div>
+</div>
+{% endblock %}

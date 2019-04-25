@@ -1,0 +1,29 @@
+{% extends 'profilepage/base.html' %}
+{% load staticfiles %}
+
+{% block title %}| Create Profile{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+	<div class="cloak">
+		<div class="row">
+			<div class="container" >
+				<div class="panel-body">
+
+					<form class="form-horinzontal" action="" method="post" enctype="multipart/form-data">
+						{% csrf_token %}
+						{% include 'profilepage/form-template.html' %}
+						<div class="col-sm-offset-2 col-sm-10">
+							<button type="submit" class="btn btn-success">Add</button>
+						</div> 
+						{% if error_message %}
+							<em><small>{{ error_message }}</small></em>
+						{% endif %}
+					</form>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

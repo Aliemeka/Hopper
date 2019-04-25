@@ -1,0 +1,60 @@
+{% extends 'profilepage/base.html' %}
+{% load staticfiles %}
+
+{% block title %}| {{ profile.username }}{% endblock %}
+
+{% block nav %}
+	<li class="shiny"><a href="{% url 'add-hobby' %}"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp;
+	    Add Hobby
+		</a>
+	</li>
+{% endblock %}
+
+{% block content %}
+	<h1 style="background-color: cyan; color: #ffffff">{{ profile.name }}<div><small style="font-style: italic; font-family: Times-New-Roman">@{{profile.username}}</small></div></h1>
+
+	<div class="container">
+		<div class="row jumbotron" style="background-color: rgba(208, 241, 236, 0.918)">
+			<div class="col-md-6">
+				<img src="{{ profile.photo.url }}" width = "400" height="400" class= "img-responsive">
+			</div>
+			<div class="col-md-6" style="background-color: #de0ff1; box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;font-family: cambria">
+				<h3 style="color: #ffffff">Basic Info:</h3>
+				<h4><p>
+					Hey I'm <strong>{{ profile.title }}</strong> <em>althogth</em> call me <strong>Aligbono</strong>
+				</p>  
+				<p>
+					I am {{profile.age}} years old. <em><strong>Obviously!!!</strong></em>
+				</p>
+				
+				{% if profile.hobby_set.all %}
+					<p style="color: #ffffff"><strong><i>My hobbies are:</i></strong></p>
+					<p style="font-style: normal;">
+						{% if error_message %}
+							<em><small>{{ error_message }}</small></em>
+						{% endif %}
+						{% for hobby in profile.hobby_set.all %}
+							- {{ hobby.hobby }}<br/>
+						{% endfor %}
+					</p>
+				{% else %}
+					<p style="color: #ffffff">	<strong><i>I have no hobbies</i></strong><br/>
+						<small><i>Click Add Hobby to add hobbies</i></small>
+					</p>
+				{% endif %}
+				</h4>	
+				<p style="font-style: normal;">
+					Contact me via email: {{ profile.email }}
+				</p>
+				<p style="font-style: normal;">
+					That's all for now!!!
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class = "cloak">
+				<a href="Roto.html"><img src="{% static 'images/CM-brainstorming-blog-graphic.png' %}" width="1150" class="img-responsive"></a>
+			</div>
+		</div>
+	</div>
+{% endblock %}
